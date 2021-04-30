@@ -16,6 +16,11 @@ font-family: 'Prompt', sans-serif;
     color: white;
     font-family: 'Gothic A1', sans-serif;
     font-weight: 100;
+    font-size: 13px;
+}
+
+li{
+    list-style:none;
 }
 
 
@@ -124,6 +129,10 @@ body {
 
 
 
+ 
+
+
+
 
 /* 컨텐츠 영역 */
 .box-body {
@@ -149,39 +158,47 @@ body {
 .flower-index {
 
     font-family: 'Gothic A1', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 17px;
     padding-top: 20%;
-    width: 101px;
+    width: 110px;
     height: 22px;
 }
 
 .flower-index img{
-    width: 13px;
-    width: 13px;
+    width: 12px;
+    width: 12px;
     padding-right: 3px;
 }
 
+
 #flower-name {
+    
     font-family: 'Italiana', serif;
     font-size: 90px;
     text-align: left;
-    width: 231px;
-    height: 80px;
-    padding-top: 5px;
-    margin: 0;
+    line-height: 0.9em;
+
+    padding-top: 10px;
     
 }
 
-.flower-detail {
+.flower-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#flower-detail {
     font-family: 'Gothic A1', sans-serif;
-    font-weight: 100;
-    font-size: 13px;
+    font-weight: 200;
+    font-size: 14px;
     padding-top: 30px;
     line-height: 180%;
     width: 342px;
     height: 120px;
 }
+
+
 
 
 /* origin과 family 부분 */
@@ -222,13 +239,13 @@ body {
     padding-bottom: 0.7em;
 }
 
-.origin-detail{
+#origin-detail{
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
-.family-detail{
+#family-detail{
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
@@ -244,12 +261,44 @@ body {
 .page-btn{
     width: 8px;
     height: 8px;
-    padding-right: 6px;
+    border-radius: 50%;
+    background-color: #4E4E4E;
+    margin-right: 6px;
 }
+
+#page1{
+    background-color: white;
+}
+
+
+
 
 /* 가운데 박스 설정 */
 .middle-box {
+    position: relative;
 
+}
+
+.next{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 45%;
+    opacity: 0.3;
+    z-index: 100;
+    left: 93%;
+    cursor: pointer;
+}
+
+.prev{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 45%;
+    opacity: 0.3;
+    z-index: 100;
+    left: -3.3%;
+    cursor: pointer;
 }
 
 
@@ -266,6 +315,7 @@ body {
     width:100%;
     height:100%;
     object-fit:cover;
+    transition:left 0.3s ease-out;
 }
 
 
@@ -279,63 +329,85 @@ body {
 }
 
 
-.flower-scroller{
-    display: flex;
-    padding-top: 30%;
-    flex-direction: row;
-    width: 712px;
-    height: 120px;
-    overflow: scroll;
+.slide-wrapper{
+    /* margin-top: 30%; */
+    /* float: left; */
+    position:relative;
+    width:380px; 
+    margin-top: 30%;
+    height:150px;
+    overflow:hidden;
 }
 
-.flower-scroller::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
+.slides{
+    position:absolute;
+    left:0;
+    top:0;
+    transition:left 0.3s ease-out;
+    /* width: 2000px; */
 }
 
-.flower-scroller img{
-    height: auto;
-    width: 232px;
-    object-fit:none;
-    padding-right: 6px;
+.slides li:not(:last-child){
+    float: left;
+    margin-right: 6px;
 }
 
-.concept-detail {
-    width: 312px;
-    height: 80px;
-}
 
-.order-button {
+    .concept-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    
+    
+    .concept-title{
+        font-family: 'Gothic A1', sans-serif;
+        font-weight: 200;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    
+    .concept-detail{
+        display: flex;
+        font-family: 'Gothic A1', sans-serif;
+        line-height: 180%;
+        font-weight: 100;
+        font-size: 14px;
+        width: 320px;
+        height: 80px;
+        width: 312px;
+        margin-top: 10px;
+        
+        line-height: 150%;
+    }
+    
+
+#order-button {
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 16px;
     letter-spacing: 0.5px;
     width: 310px;
     height: 64px;
     text-align: center;
     vertical-align: middle;
-    background-color: rgba(182, 182, 182, 0.253);
+    background-color: rgba(182, 182, 182, 0.274);
     cursor: pointer;
     border: none;
     outline: 0;
     transition: background 0.23s ease-in-out,
      color 0.23s ease-in-out;
-
+     -webkit-transform: perspective(1px) translateZ(0);
+     transform: perspective(1px) translateZ(0);
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+     -webkit-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+     -webkit-transition-property: transform;
+     transition-property: transform;
 }
 
-.order-button:hover{
+#order-button:hover{
     background-color: rgba(182, 182, 182, 0.219);
-}
-
-.concept-title{
-    font-size: 15px;
-    padding-top: 30px;
-}
-
-.concept-detail{
-    width: 312px;
-
-    font-size: 12px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    line-height: 150%;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }

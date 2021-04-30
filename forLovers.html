@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Florecommand</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+
+       
+        <!-- 상단바 영역 -->
+        <div class="upper-bar">
+            <h1 id="title">Florecommand</h1>
+            <!-- 메뉴 영역 -->
+            <div class="menu-wrap">
+                <ul class="dep1">
+                    <li>
+                        <a class="season-menu" href="#">BY SEASON</a>
+                        <ul class="dep2">
+                            <li id="spring">
+                                <a href="SeasonSpring.html">봄</a>
+                            </li>
+                            <li id="summer">
+                                <a href="SeasonSummer.html">여름</a>
+                            </li>
+                            <li id="fall">
+                                <a href="SeasonFall.html">가을</a>
+                            </li>
+                            <li id="winter">
+                                <a href="SeasonWinter.html">겨울</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="color-menu" href="#">BY COLOR</a>
+                        <ul class="dep2">
+                            <li id="red-family">
+                                <a href="redFamily.html">붉은색 계열</a>
+                            </li>
+                            <!-- <li id="pink-family">
+                                <a href="#">분홍색 계열</a>
+                            </li> -->
+                            <li id="yellow-family">
+                                <a href="yellowFamily.html">노랑색 계열</a>
+                            </li>
+                            <!-- <li id="green-family">
+                                <a href="#">녹색 계열</a>
+                            </li> -->
+                            <li id="blue-family">
+                                <a href="blueFamily.html">파랑색 계열</a>
+                            </li>
+                            <!-- <li id="purple-family">
+                                <a href="#">보라색 계열</a>
+                            </li>
+                            <li id="white-family">
+                                <a href="#">흰색 계열</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="whom-menu" href="#">FOR WHOM</a>
+                        <ul class="dep2">
+                            <li id="for-family">
+                                <a href="forFamily.html">가족에게</a>
+                            </li>
+                            <!-- <li id="for-friend">
+                                <a href="#">친구에게</a>
+                            </li> -->
+                            <li id="for-lovers">
+                                <a href="forLovers.html">연인에게</a>
+                            </li>
+                            <li id="for-me">
+                                <a href="forMe.html">나에게</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 페이지 바디 부분 -->
+        <div class="box-body">
+            <!-- 왼쪽 박스 영역 -->
+            <div class="left-box">
+                <div id="flowerindex" class="flower-index">
+                    <img src="Rectangle1.png" alt="#">
+                    달리아
+                </div>
+                <div id="flower-name">
+                    Dhila
+                </div>
+                <p id="flower-detail">
+                    달리아는 연인에게 선물하기 정말 좋은 꽃이지요! "당신의 사랑이 나를 행복하게 합니다."라는 꽃말을 가지고 있습니다. 원산지는 멕시코로 약 20여종의 원종이 자생하고 있습니다. 우리나라에서는 노지재배시 여름철 고온다습하고 비가 많이 와서 생육이 나쁘나 8월 하순부터 10월까지는 꽃이 선명해집니다.
+                </p>
+            <div class="catagory-container">
+                <div class="origin-container">
+                    <div class="origin-index">Origin</div>
+                    <div id="origin-detail">Eurasia</div>
+                </div>
+                <div class="family-container">
+                    <div class="family-index">Family</div>
+                    <div id="family-detail">Carlquistia</div>
+                </div>
+            </div>
+
+            <div class="page-btn-container">
+                <div id="page1" class="page-btn"></div>
+                <div id="page2" class="page-btn"></div>
+                <!-- <div id="page3" class="page-btn"></div>
+                <div id="page4" class="page-btn"></div> -->
+            </div>
+
+        </div>
+
+        <!-- 가운데 박스 영역 -->
+        <div class="middle-box">
+            <div id="flower-container" class="flower-img-container">
+                <img id="spring-flower" class=" flower-img" src="dhila.png" />
+                
+            </div>
+
+        <!-- 화살표 부분 -->
+            <div class="arrow-container">
+                <img class = "prev" id="left-arrow" src="left-arrow-white.png" alt="" onclick="changeFlowers();">
+                <img class = "next" id="right-arrow" src="right-arrow-white.png" alt="" onclick="changeFlowers();">
+                
+            </div>
+        </div>
+
+        <!-- 오른쪽 박스 영역 -->
+        <div class="right-box">
+            <div class="slide-wrapper">
+                <ul class="slides">
+                    <li><img src="dhila232.png" alt=""></li>
+                    <li><img src="tulip232.png" alt=""></li>
+
+                  </ul>
+                  
+            </div>      
+
+           
+            
+            
+            <div class="concept-container">
+                <div class="concept-title">
+                    연인에게 꽃말과 함께 마음을 전해보세요!
+                </div>
+                <p class="concept-detail">
+                    All through the long winter, I dream of my garden. On the first day of spring, I dig my fingers deep into the soft earth. I can feel its energy, and my spirits soar. 
+                </p>
+            </div>
+            <input id="order-button" type="button" value="주문하러 가기" 
+            onClick="window.open('http://mytreelove.com/shop/item.php?it_id=Dahlia001')">
+
+
+            <script type="text/javascript" src="forLovers.js"></script>
+
+
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

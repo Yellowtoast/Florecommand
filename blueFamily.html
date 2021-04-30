@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Florecommand</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+
+       
+        <!-- 상단바 영역 -->
+        <div class="upper-bar">
+            <h1 id="title">Florecommand</h1>
+            <!-- 메뉴 영역 -->
+            <div class="menu-wrap">
+                <ul class="dep1">
+                    <li>
+                        <a class="season-menu" href="#">BY SEASON</a>
+                        <ul class="dep2">
+                            <li id="spring">
+                                <a href="SeasonSpring.html">봄</a>
+                            </li>
+                            <li id="summer">
+                                <a href="SeasonSummer.html">여름</a>
+                            </li>
+                            <li id="fall">
+                                <a href="SeasonFall.html">가을</a>
+                            </li>
+                            <li id="winter">
+                                <a href="SeasonWinter.html">겨울</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="color-menu" href="#">BY COLOR</a>
+                        <ul class="dep2">
+                            <li id="red-family">
+                                <a href="redFamily.html">붉은색 계열</a>
+                            </li>
+                            <!-- <li id="pink-family">
+                                <a href="#">분홍색 계열</a>
+                            </li> -->
+                            <li id="yellow-family">
+                                <a href="yellowFamily.html">노랑색 계열</a>
+                            </li>
+                            <!-- <li id="green-family">
+                                <a href="#">녹색 계열</a>
+                            </li> -->
+                            <li id="blue-family">
+                                <a href="blueFamily.html">파랑색 계열</a>
+                            </li>
+                            <!-- <li id="purple-family">
+                                <a href="#">보라색 계열</a>
+                            </li>
+                            <li id="white-family">
+                                <a href="#">흰색 계열</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="whom-menu" href="#">FOR WHOM</a>
+                        <ul class="dep2">
+                            <li id="for-family">
+                                <a href="forFamily.html">가족에게</a>
+                            </li>
+                            <!-- <li id="for-friend">
+                                <a href="#">친구에게</a>
+                            </li> -->
+                            <li id="for-lovers">
+                                <a href="forLovers.html">연인에게</a>
+                            </li>
+                            <li id="for-me">
+                                <a href="forMe.html">나에게</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <!-- 페이지 바디 부분 -->
+        <div class="box-body">
+            <!-- 왼쪽 박스 영역 -->
+            <div class="left-box">
+                <div id="flowerindex" class="flower-index">
+                    <img src="Rectangle1.png" alt="#">
+                    수국
+                </div>
+                <div id="flower-name">
+                    Hydrangea
+                </div>
+                <p id="flower-detail">
+                    포근하고 풍성한 아름다움을 풍기는 수국의 꽃말은 "인내심이 강한 사랑, 진심, 사과"라고 하네요. 수국은 물을 좋아하는 꽃이라 물 수자가 들어가 수국이라 불립니다.  물이 어떤 성질을 띄고있느냐에 따라 꽃의 색도 달라진다고 하네요! 다양하고 화려한 색상의 수국을 구경해보세요!
+                </p>
+            <div class="catagory-container">
+                <div class="origin-container">
+                    <div class="origin-index">Origin</div>
+                    <div id="origin-detail">North America</div>
+                </div>
+                <div class="family-container">
+                    <div class="family-index">Family</div>
+                    <div id="family-detail">Hydrangeaceae</div>
+                </div>
+            </div>
+
+            <div class="page-btn-container">
+                <div id="page1" class="page-btn"></div>
+
+
+            </div>
+
+        </div>
+
+        <!-- 가운데 박스 영역 -->
+        <div class="middle-box">
+            <div id="flower-container" class="flower-img-container">
+                <img id="spring-flower" class=" flower-img" src="hydrangea.png" />
+                
+            </div>
+
+        <!-- 화살표 부분 -->
+            <div class="arrow-container">
+                <img class = "prev" id="left-arrow" src="left-arrow-white.png" alt="" onclick="changeFlowers();">
+                <img class = "next" id="right-arrow" src="right-arrow-white.png" alt="" onclick="changeFlowers();">
+                
+            </div>
+        </div>
+
+        <!-- 오른쪽 박스 영역 -->
+        <div class="right-box">
+            <div class="slide-wrapper">
+                <ul class="slides">
+                    <li><img src="hydrangea232.png" alt=""></li>
+
+                  </ul>
+                  
+            </div>      
+
+           
+            
+            
+            <div class="concept-container">
+                <div class="concept-title">
+                    흔하지 않은 파란색 꽃은 일상에 생기를 불어넣어 줄 거에요!
+                </div>
+                <p class="concept-detail">
+                    All through the long winter, I dream of my garden. On the first day of spring, I dig my fingers deep into the soft earth. I can feel its energy, and my spirits soar. 
+                </p>
+            </div>
+            <input id="order-button" type="button" value="주문하러 가기" 
+            onClick="window.open('http://mytreelove.com/shop/item.php?it_id=Hydrangea_nikkoblue')">
+
+
+            <script type="text/javascript" src="blueFamily.js"></script>
+
+
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
